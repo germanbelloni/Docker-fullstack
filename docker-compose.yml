@@ -1,0 +1,25 @@
+version: '4.12'
+services:
+
+  frontend:
+    container_name: reactfront
+    restart: always
+    build: /frontend
+    ports:
+      - '80:80'
+
+  backend:
+    container_name: nodeback
+    build: /backend
+    restart: always
+    ports:
+      - '5000:5000'
+
+  mysql:
+    image: mysql:latest
+    ports: 
+      - "3306:3306"
+    
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: germancito87

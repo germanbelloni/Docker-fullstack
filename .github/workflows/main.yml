@@ -1,0 +1,21 @@
+name: Acción de ejemplo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v2
+
+    - name: Mostrar mensaje
+      run: echo "Se ha realizado un push en la rama main"
+      
+
+      
+      
